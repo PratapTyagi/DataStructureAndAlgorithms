@@ -47,7 +47,7 @@ public class Implementation {
 
             if (top.state == 1) {
                 ++index;
-                if (arr[index] != null) {
+                if (index < arr.length && arr[index] != null) {
                     top.node.left = new Node(arr[index]);
                     stack.add(new Pair(top.node.left, 1));
                 } else {
@@ -56,7 +56,7 @@ public class Implementation {
                 top.state++;
             } else if (top.state == 2) {
                 ++index;
-                if (arr[index] != null) {
+                if (index < arr.length && arr[index] != null) {
                     top.node.right = new Node(arr[index]);
                     stack.add(new Pair(top.node.right, 1));
                 } else {
