@@ -2,19 +2,18 @@ package LinkedLists;
 
 import java.io.*;
 
-class Implementation {
+class Node {
+    Node next;
+    int data;
 
-    Node head;
-
-    class Node {
-        Node next;
-        int data;
-
-        public Node(int data) {
-            this.data = data;
-            this.next = null;
-        }
+    public Node(int data) {
+        this.data = data;
+        this.next = null;
     }
+}
+
+class Implementation {
+    Node head;
 
     void push(int d) {
         if (head == null) {
@@ -32,7 +31,7 @@ class Implementation {
         temp.next = node;
     }
 
-    void printList() {
+    void printList(Node head) {
         Node temp = head;
 
         while (temp != null) {
@@ -52,6 +51,6 @@ class Implementation {
         for (int i = 0; i < d.length; i++)
             list.push(Integer.parseInt(d[i]));
 
-        list.printList();
+        list.printList(list.head);
     }
 }
