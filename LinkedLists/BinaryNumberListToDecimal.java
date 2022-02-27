@@ -5,13 +5,13 @@ public class BinaryNumberListToDecimal {
         if (head == null) {
             return -1;
         }
-        StringBuilder str = new StringBuilder();
+        int ans = 0;
         while (head != null) {
-            str.append(head.data);
+            ans = ans >> 1 | head.data;
             head = head.next;
         }
 
-        return Integer.parseInt(str.toString(), 2);
+        return ans;
     }
 
     public static void main(String[] args) {
