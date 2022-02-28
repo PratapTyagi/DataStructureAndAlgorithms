@@ -31,6 +31,16 @@ class Implementation {
         temp.next = node;
     }
 
+    void insertHead(int d) {
+        if (head == null) {
+            head = new Node(d);
+            return;
+        }
+        Node temp = new Node(d);
+        temp.next = head;
+        head = temp;
+    }
+
     void printList(Node head) {
         Node temp = head;
 
