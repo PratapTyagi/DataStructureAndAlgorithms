@@ -1,8 +1,6 @@
 package Strings;
 
 import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map.Entry;
 
 public class KAnagrams {
     static boolean areKAnagrams(String s1, String s2, int k) {
