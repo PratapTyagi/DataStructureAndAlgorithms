@@ -1,5 +1,3 @@
-package DynamicProgramming.Knapsack01;
-
 public class TopDownImplementation {
     static int solve(int[] wt, int[] val, int W, int n, int[][] dp) {
         for (int i = 0; i < dp.length; i++)

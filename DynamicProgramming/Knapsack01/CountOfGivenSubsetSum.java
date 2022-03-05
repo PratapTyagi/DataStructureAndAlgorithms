@@ -1,5 +1,3 @@
-package DynamicProgramming.Knapsack01;
-
 public class CountOfGivenSubsetSum {
     static int calculate(int[] arr, int sum, int n, int[][] dp) {
         if (sum == 0) {

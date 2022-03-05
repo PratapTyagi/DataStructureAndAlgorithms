@@ -1,5 +1,3 @@
-package DynamicProgramming.Knapsack01;
-
 public class SubsetSumTopDown {
     static boolean isSum(int[] set, int sum, int n, boolean[][] dp) {
         for (int i = 0; i < dp.length; i++) {

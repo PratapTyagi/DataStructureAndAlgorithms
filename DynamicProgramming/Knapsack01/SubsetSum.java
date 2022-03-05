@@ -1,5 +1,3 @@
-package DynamicProgramming.Knapsack01;
-
 class SubsetSum {
     static int isSum(int[] set, int sum, int n, int[][] dp) {
         if (sum == 0)

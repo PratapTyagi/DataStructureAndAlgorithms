@@ -1,5 +1,3 @@
-package DynamicProgramming.Knapsack01;
-
 public class Implementation {
     static int solve(int[] wt, int[] val, int W, int n, int[][] dp) {
         if (n == 0 || W == 0) {

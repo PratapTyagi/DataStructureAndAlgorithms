@@ -1,5 +1,3 @@
-package DynamicProgramming.Knapsack01;
-
 public class EqualSumPartition {
     static int isPossible(int[] arr, int sum, int n, int[][] dp) {
         if (sum == 0)

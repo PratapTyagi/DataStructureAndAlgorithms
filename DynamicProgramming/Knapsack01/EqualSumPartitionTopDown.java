@@ -1,5 +1,3 @@
-package DynamicProgramming.Knapsack01;
-
 public class EqualSumPartitionTopDown {
     static boolean isPossible(int[] arr, int sum, int n) {
         int[][] dp = new int[n + 1][sum + 1];
