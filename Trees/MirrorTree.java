@@ -1,5 +1,3 @@
-package Trees;
-
 public class MirrorTree {
     static void mirror(Node root) {
         if (root == null) {

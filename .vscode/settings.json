@@ -1,10 +1,11 @@
 {
   "java.project.sourcePaths": [
+    "SortingAndSearching",
     "DynamicProgramming/UnboundedKnapsack",
     "DynamicProgramming/Trees",
+    "DynamicProgramming/Randoms",
     "DynamicProgramming/Mcm",
     "DynamicProgramming/Lcs",
     "DynamicProgramming/Knapsack01",
-    "DynamicProgramming/Randoms"
   ]
 }

@@ -1,5 +1,3 @@
-package Trees;
-
 class MaxGcdOfSiblings {
 
     static int[] maxGcdOfSiblings(Node root) {

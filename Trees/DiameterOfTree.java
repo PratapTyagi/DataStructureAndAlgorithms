@@ -1,5 +1,3 @@
-package Trees;
-
 public class DiameterOfTree {
 
     static int height(Node root) {

@@ -1,5 +1,3 @@
-package Trees;
-
 public class TwoTreesIdentical {
 
     static boolean identical(Node root1, Node root2) {

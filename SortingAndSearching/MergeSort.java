@@ -1,5 +1,3 @@
-package SortingAndSearching;
-
 public class MergeSort {
     static void merge(int[] arr, int start, int mid, int end) {
         int n1 = mid - start + 1, n2 = end - mid;
@@ -36,12 +34,11 @@ public class MergeSort {
             j++;
             k++;
         }
-        // printArray(arr);
     }
 
     static void sort(int[] arr, int start, int end) {
         if (start < end) {
-            int mid = (end + start) / 2;
+            int mid = start + (end - start) / 2;
             sort(arr, start, mid);
             sort(arr, mid + 1, end);
             merge(arr, start, mid, end);

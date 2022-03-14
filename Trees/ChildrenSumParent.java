@@ -1,5 +1,3 @@
-package Trees;
-
 public class ChildrenSumParent {
 
     static int isSumProperty(Node root) {

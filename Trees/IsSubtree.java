@@ -1,5 +1,3 @@
-package Trees;
-
 public class IsSubtree {
 
     static boolean areIdentical(Node root1, Node root2) {

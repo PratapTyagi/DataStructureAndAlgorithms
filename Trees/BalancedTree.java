@@ -1,5 +1,3 @@
-package Trees;
-
 public class BalancedTree {
 
     static int height(Node root) {

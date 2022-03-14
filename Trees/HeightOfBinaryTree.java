@@ -1,5 +1,3 @@
-package Trees;
-
 public class HeightOfBinaryTree {
     static int height(Node root) {
         if (root == null) {
