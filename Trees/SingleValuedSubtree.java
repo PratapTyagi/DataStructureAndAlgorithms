@@ -1,20 +1,21 @@
 public class SingleValuedSubtree {
-    static boolean isUnivalue(Node root, int x) {
+    static boolean uniValue(Node root, int[] arr) {
         if (root == null)
             return true;
-        if (root.data != x)
+        boolean left = uniValue(root.left, arr);
+        boolean right = uniValue(root.right, arr);
+
+        if (left == false || right == false)
             return false;
 
-        return isUnivalue(root.left, x) && isUnivalue(root.right, x);
-    }
+        if (root.left != null && root.left.data != root.data)
+            return false;
 
-    static void uniValue(Node root, int[] arr) {
-        if (root == null)
-            return;
-        if (isUnivalue(root, root.data) == true)
-            arr[0] += 1;
-        uniValue(root.left, arr);
-        uniValue(root.right, arr);
+        if (root.right != null && root.right.data != root.data)
+            return false;
+
+        arr[0]++;
+        return true;
     }
 
     public static int singlevalued(Node root) {
