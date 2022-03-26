@@ -1,5 +1,3 @@
-package Arrays;
-
 public class SortArrayOf0s1s2s {
     static void swap(int[] arr, int i, int j) {
         int temp = arr[i];
