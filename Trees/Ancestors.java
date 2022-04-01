@@ -14,7 +14,7 @@ public class Ancestors {
         return false;
     }
 
-    static ArrayList<Integer> Ancestors(Node root, int target) {
+    static ArrayList<Integer> ancestors(Node root, int target) {
         ArrayList<Integer> al = new ArrayList<>();
 
         find(root, target, al);
@@ -29,7 +29,7 @@ public class Ancestors {
         i.createBinaryTree(arr, root);
         i.inOrder(root);
         System.out.println();
-        ArrayList<Integer> al = Ancestors(root, 2);
+        ArrayList<Integer> al = ancestors(root, 2);
 
         for (Integer e : al)
             System.out.print(e + " ");

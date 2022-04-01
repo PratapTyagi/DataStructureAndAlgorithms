@@ -8,6 +8,7 @@
     "DynamicProgramming/Mcm",
     "DynamicProgramming/Lcs",
     "DynamicProgramming/Knapsack01",
-    "Arrays"
+    "Arrays",
+    "BinarySearchTree"
   ]
 }

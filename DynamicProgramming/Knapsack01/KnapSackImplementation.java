@@ -1,4 +1,4 @@
-public class Implementation {
+public class KnapSackImplementation {
     static int solve(int[] wt, int[] val, int W, int n, int[][] dp) {
         if (n == 0 || W == 0) {
             return 0;

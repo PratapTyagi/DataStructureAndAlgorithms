@@ -1,18 +1,18 @@
 import java.util.Stack;
 
-class Node {
-    int data;
-    Node left;
-    Node right;
-
-    public Node(int data) {
-        this.data = data;
-        left = null;
-        right = null;
-    }
-}
-
 public class DiameterBinaryTree {
+    static class Node {
+        int data;
+        Node left;
+        Node right;
+
+        public Node(int data) {
+            this.data = data;
+            left = null;
+            right = null;
+        }
+    }
+
     static class CallByReference {
         private int a;
 

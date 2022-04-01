@@ -1,9 +1,7 @@
-package BinarySearchTree;
-
 import java.util.PriorityQueue;
 
 public class KthLargestElement {
-    static void largest(Node root, PriorityQueue<Integer> queue) {
+    static void largest(BSTNode root, PriorityQueue<Integer> queue) {
         if (root == null) {
             return;
         }
@@ -13,7 +11,7 @@ public class KthLargestElement {
         queue.add(root.data);
     }
 
-    static int kthLargest(Node root, int k) {
+    static int kthLargest(BSTNode root, int k) {
         PriorityQueue<Integer> queue = new PriorityQueue<>((a, b) -> b - a);
         largest(root, queue);
         int ans = Integer.MIN_VALUE;
@@ -26,8 +24,8 @@ public class KthLargestElement {
     public static void main(String[] args) {
         Integer[] arr = { 10, 1, 51, 3, 0 };
 
-        Implementation i = new Implementation();
-        Node root = i.construct(arr, 0, arr.length - 1);
+        BSTImplementation i = new BSTImplementation();
+        BSTNode root = i.construct(arr, 0, arr.length - 1);
 
         i.inOrder(root);
 

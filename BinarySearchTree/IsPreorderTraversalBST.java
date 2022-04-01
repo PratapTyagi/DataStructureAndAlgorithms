@@ -1,5 +1,3 @@
-package BinarySearchTree;
-
 import java.util.ArrayList;
 import java.util.Stack;
 
@@ -18,7 +16,7 @@ public class IsPreorderTraversalBST {
         return 1;
     }
 
-    static void preOrder(Node root, ArrayList<Integer> al) {
+    static void preOrder(BSTNode root, ArrayList<Integer> al) {
         if (root == null)
             return;
 
@@ -28,11 +26,10 @@ public class IsPreorderTraversalBST {
     }
 
     public static void main(String[] args) {
-        Implementation i = new Implementation();
+        BSTImplementation i = new BSTImplementation();
         Integer[] arr = { 1, 2, null, null, 3, null, null };
 
-        Node root = new Node(arr[0]);
-        i.createBinaryTree(arr, root);
+        BSTNode root = i.construct(arr, 0, arr.length - 1);
         ArrayList<Integer> al1 = new ArrayList<Integer>();
         preOrder(root, al1);
 

@@ -1,13 +1,11 @@
-package BinarySearchTree;
-
 class InOrderSuccessor {
-    static Node inorderSuccessor(Node root, int x) {
+    static BSTNode inorderSuccessor(BSTNode root, int x) {
         if (root == null) {
             return null;
         }
 
-        Node ans = null;
-        Node temp = root;
+        BSTNode ans = null;
+        BSTNode temp = root;
         while (temp != null) {
             if (temp.data > x) {
                 ans = temp;
@@ -21,11 +19,11 @@ class InOrderSuccessor {
     public static void main(String[] args) {
         Integer[] arr = { 0, 2, 3, 5 };
 
-        Implementation i = new Implementation();
-        Node root = i.construct(arr, 0, arr.length - 1);
+        BSTImplementation i = new BSTImplementation();
+        BSTNode root = i.construct(arr, 0, arr.length - 1);
 
         i.inOrder(root);
-        Node node = inorderSuccessor(root, 2);
+        BSTNode node = inorderSuccessor(root, 2);
         System.out.println(node.data);
     }
 }

@@ -1,10 +1,8 @@
-package BinarySearchTree;
-
 import java.util.ArrayList;
 
 public class ArrayToBst {
 
-    static void inOrder(Node root, ArrayList<Integer> al) {
+    static void inOrder(BSTNode root, ArrayList<Integer> al) {
         if (root == null)
             return;
         al.add(root.data);
@@ -15,8 +13,8 @@ public class ArrayToBst {
     public static void main(String[] a) {
         Integer[] arr = { 0, 2, 3, 5 };
 
-        Implementation i = new Implementation();
-        Node root = i.construct(arr, 0, arr.length - 1);
+        BSTImplementation i = new BSTImplementation();
+        BSTNode root = i.construct(arr, 0, arr.length - 1);
 
         ArrayList<Integer> al = new ArrayList<>(arr.length);
         inOrder(root, al);
