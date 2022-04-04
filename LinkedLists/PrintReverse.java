@@ -1,7 +1,5 @@
-package LinkedLists;
-
 public class PrintReverse {
-    static void reverse(Node head) {
+    static void reverse(LinkedListNode head) {
         if (head == null)
             return;
         reverse(head.next);
@@ -9,13 +7,13 @@ public class PrintReverse {
     }
 
     public static void main(String[] args) {
-        Implementation i = new Implementation();
+        LinkedListImplementation i = new LinkedListImplementation();
 
         int[] arr = new int[] { 3, 3, 4, 1, 1 };
         for (int j = 0; j < arr.length; j++)
             i.push(arr[j]);
 
-        Node head = i.head;
+        LinkedListNode head = i.head;
         reverse(head);
     }
 }

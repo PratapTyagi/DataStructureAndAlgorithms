@@ -1,28 +1,26 @@
-package LinkedLists;
-
 import java.io.*;
 
-class Node {
-    Node next;
+class LinkedListNode {
+    LinkedListNode next;
     int data;
 
-    public Node(int data) {
+    public LinkedListNode(int data) {
         this.data = data;
         this.next = null;
     }
 }
 
-class Implementation {
-    Node head;
+class LinkedListImplementation {
+    LinkedListNode head;
 
     void push(int d) {
         if (head == null) {
-            head = new Node(d);
+            head = new LinkedListNode(d);
             return;
         }
 
-        Node node = new Node(d);
-        Node temp = head;
+        LinkedListNode node = new LinkedListNode(d);
+        LinkedListNode temp = head;
         node.next = null;
 
         while (temp.next != null) {
@@ -33,16 +31,16 @@ class Implementation {
 
     void insertHead(int d) {
         if (head == null) {
-            head = new Node(d);
+            head = new LinkedListNode(d);
             return;
         }
-        Node temp = new Node(d);
+        LinkedListNode temp = new LinkedListNode(d);
         temp.next = head;
         head = temp;
     }
 
-    void printList(Node head) {
-        Node temp = head;
+    void printList(LinkedListNode head) {
+        LinkedListNode temp = head;
 
         while (temp != null) {
             System.out.print(temp.data + " ");
@@ -53,7 +51,7 @@ class Implementation {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-        Implementation list = new Implementation();
+        LinkedListImplementation list = new LinkedListImplementation();
 
         System.out.println("Enter items in list: ");
         String[] d = br.readLine().split(" ");

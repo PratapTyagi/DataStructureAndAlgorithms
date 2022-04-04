@@ -1,19 +1,17 @@
-package LinkedLists;
-
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.LinkedHashSet;
 
 public class IntersectionNode {
-    private static Node head1, head2;
+    private static LinkedListNode head1, head2;
 
-    static Node push(Node head, int d) {
+    static LinkedListNode push(LinkedListNode head, int d) {
         if (head == null) {
-            head = new Node(d);
+            head = new LinkedListNode(d);
             return head;
         }
-        Node node = new Node(d);
-        Node temp = head;
+        LinkedListNode node = new LinkedListNode(d);
+        LinkedListNode temp = head;
         node.next = null;
 
         while (temp.next != null) {
@@ -23,8 +21,8 @@ public class IntersectionNode {
         return head;
     }
 
-    static void printList(Node head) {
-        Node temp = head;
+    static void printList(LinkedListNode head) {
+        LinkedListNode temp = head;
 
         while (temp != null) {
             System.out.print(temp.data + " ");
@@ -32,17 +30,17 @@ public class IntersectionNode {
         }
     }
 
-    static void printSet(HashSet<Node> set) {
-        Iterator<Node> i = set.iterator();
+    static void printSet(HashSet<LinkedListNode> set) {
+        Iterator<LinkedListNode> i = set.iterator();
 
         while (i.hasNext()) {
-            Node val = (Node) i.next();
+            LinkedListNode val = (LinkedListNode) i.next();
             System.out.print(val.data + " ");
         }
     }
 
-    static Node intersection(Node head1, Node head2, HashSet<Node> set) {
-        Node a = head1, b = head2;
+    static LinkedListNode intersection(LinkedListNode head1, LinkedListNode head2, HashSet<LinkedListNode> set) {
+        LinkedListNode a = head1, b = head2;
         while (a != b) {
             a = a == null ? head2 : a.next;
             b = b == null ? head1 : b.next;
@@ -100,8 +98,8 @@ public class IntersectionNode {
             head2 = push(head2, arr2[j]);
         head2.next.next = head1;
 
-        HashSet<Node> set = new LinkedHashSet<>();
-        Node res = intersection(head1, head2, set);
+        HashSet<LinkedListNode> set = new LinkedHashSet<>();
+        LinkedListNode res = intersection(head1, head2, set);
         System.out.println(res != null ? res.data : res);
     }
 }

@@ -1,15 +1,13 @@
-package LinkedLists;
-
 public class MergeTwoSortedLists {
-    private static Node head1, head2;
+    private static LinkedListNode head1, head2;
 
-    static Node push(Node head, int d) {
+    static LinkedListNode push(LinkedListNode head, int d) {
         if (head == null) {
-            head = new Node(d);
+            head = new LinkedListNode(d);
             return head;
         }
-        Node node = new Node(d);
-        Node temp = head;
+        LinkedListNode node = new LinkedListNode(d);
+        LinkedListNode temp = head;
         node.next = null;
 
         while (temp.next != null) {
@@ -19,8 +17,8 @@ public class MergeTwoSortedLists {
         return head;
     }
 
-    static void printList(Node head) {
-        Node temp = head;
+    static void printList(LinkedListNode head) {
+        LinkedListNode temp = head;
 
         while (temp != null) {
             System.out.print(temp.data + " ");
@@ -28,30 +26,30 @@ public class MergeTwoSortedLists {
         }
     }
 
-    static Node merge(Node head1, Node head2) {
+    static LinkedListNode merge(LinkedListNode head1, LinkedListNode head2) {
         if (head1 == null) {
             return head2;
         }
         if (head2 == null) {
             return head1;
         }
-        Node t1 = head1, t2 = head2;
+        LinkedListNode t1 = head1, t2 = head2;
 
-        Node res = null;
+        LinkedListNode res = null;
         if (head1.data < head2.data) {
-            res = new Node(head1.data);
+            res = new LinkedListNode(head1.data);
             t1 = t1.next;
         } else {
-            res = new Node(head2.data);
+            res = new LinkedListNode(head2.data);
             t2 = t2.next;
         }
-        Node pointer = res;
+        LinkedListNode pointer = res;
         while (t1 != null && t2 != null) {
             if (t1.data < t2.data) {
-                pointer.next = new Node(t1.data);
+                pointer.next = new LinkedListNode(t1.data);
                 t1 = t1.next;
             } else if (t1.data >= t2.data) {
-                pointer.next = new Node(t2.data);
+                pointer.next = new LinkedListNode(t2.data);
                 t2 = t2.next;
             }
             pointer = pointer.next;
@@ -60,11 +58,11 @@ public class MergeTwoSortedLists {
         }
 
         while (t1 != null) {
-            pointer.next = new Node(t1.data);
+            pointer.next = new LinkedListNode(t1.data);
             t1 = t1.next;
         }
         while (t2 != null) {
-            pointer.next = new Node(t2.data);
+            pointer.next = new LinkedListNode(t2.data);
             t2 = t2.next;
         }
         return res;
@@ -78,7 +76,7 @@ public class MergeTwoSortedLists {
         for (int j = 0; j < arr2.length; j++)
             head2 = push(head2, arr2[j]);
 
-        Node res = merge(head1, head2);
+        LinkedListNode res = merge(head1, head2);
         printList(res);
     }
 }

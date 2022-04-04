@@ -1,7 +1,5 @@
-package LinkedLists;
-
 public class BinaryNumberListToDecimal {
-    static int toDecimal(Node head) {
+    static int toDecimal(LinkedListNode head) {
         if (head == null) {
             return -1;
         }
@@ -15,13 +13,13 @@ public class BinaryNumberListToDecimal {
     }
 
     public static void main(String[] args) {
-        Implementation i = new Implementation();
+        LinkedListImplementation i = new LinkedListImplementation();
 
         int[] arr = new int[] { 0, 0, 1, 1, 1 };
         for (int j = 0; j < arr.length; j++)
             i.push(arr[j]);
 
-        Node head = i.head;
+        LinkedListNode head = i.head;
         int middle = toDecimal(head);
         System.out.println(middle);
     }

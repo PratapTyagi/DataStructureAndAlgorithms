@@ -1,15 +1,13 @@
-package LinkedLists;
-
 public class ReverseLinkedList {
 
-    static Node reverse(Node head) {
+    static LinkedListNode reverse(LinkedListNode head) {
         if (head == null) {
             return head;
         }
 
-        Node next = null;
-        Node curr = head;
-        Node prev = null;
+        LinkedListNode next = null;
+        LinkedListNode curr = head;
+        LinkedListNode prev = null;
 
         while (curr != null) {
             next = curr.next;
@@ -23,13 +21,13 @@ public class ReverseLinkedList {
     }
 
     public static void main(String[] args) throws Exception {
-        Implementation i = new Implementation();
+        LinkedListImplementation i = new LinkedListImplementation();
 
         int[] arr = new int[] { 9, 5, 1, 8, 6, 1, 3 };
         for (int j = 0; j < arr.length; j++)
             i.push(arr[j]);
 
-        Node head = i.head;
+        LinkedListNode head = i.head;
         head = reverse(head);
 
         i.printList(head);

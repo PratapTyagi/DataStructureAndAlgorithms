@@ -1,16 +1,14 @@
-package LinkedLists;
-
 public class RemoveDuplicatesFromSortedList {
-    static Node remove(Node head) {
+    static LinkedListNode remove(LinkedListNode head) {
         if (head == null) {
             return head;
         }
 
-        Node temp = head;
-        Node prev = null;
+        LinkedListNode temp = head;
+        LinkedListNode prev = null;
         while (temp != null) {
             if (prev != null && temp.data == prev.data) {
-                Node t = temp.next;
+                LinkedListNode t = temp.next;
                 prev.next = temp.next;
                 temp = t;
             } else {
@@ -23,13 +21,13 @@ public class RemoveDuplicatesFromSortedList {
     }
 
     public static void main(String[] args) {
-        Implementation i = new Implementation();
+        LinkedListImplementation i = new LinkedListImplementation();
 
         int[] arr = new int[] { 3, 3, 4, 1, 1 };
         for (int j = 0; j < arr.length; j++)
             i.push(arr[j]);
 
-        Node head = i.head;
+        LinkedListNode head = i.head;
         head = remove(head);
 
         i.printList(head);

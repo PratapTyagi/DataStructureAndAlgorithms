@@ -1,7 +1,5 @@
-package LinkedLists;
-
 public class DeleteNode {
-    static Node delete(Node head, int data) {
+    static LinkedListNode delete(LinkedListNode head, int data) {
         if (head == null) {
             return null;
         }
@@ -10,8 +8,8 @@ public class DeleteNode {
             return head;
         }
 
-        Node temp = head;
-        Node prev = temp;
+        LinkedListNode temp = head;
+        LinkedListNode prev = temp;
 
         while (temp != null) {
             if (temp.data == data) {
@@ -24,13 +22,13 @@ public class DeleteNode {
     }
 
     public static void main(String[] args) {
-        Implementation i = new Implementation();
+        LinkedListImplementation i = new LinkedListImplementation();
 
         int[] arr = new int[] { 0, 5, 6, 8, 1 };
         for (int j = 0; j < arr.length; j++)
             i.push(arr[j]);
 
-        Node head = i.head;
+        LinkedListNode head = i.head;
         head = delete(head, 1);
 
         i.printList(head);
