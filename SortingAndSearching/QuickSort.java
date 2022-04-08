@@ -1,22 +1,23 @@
 public class QuickSort {
+
+    static void swap(int[] arr, int i, int j) {
+        int temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+    }
+
     static int partition(int[] arr, int start, int end) {
         int pivot = arr[end];
-        int i = start - 1;
+        int i = start, j = start;
 
-        for (int j = start; j <= end - 1; j++) {
-            if (arr[j] < pivot) {
+        while (i <= end) {
+            if (arr[i] <= pivot)
+                swap(arr, i++, j++);
+            else
                 i++;
-                int temp = arr[j];
-                arr[j] = arr[i];
-                arr[i] = temp;
-            }
         }
 
-        int temp = arr[i + 1];
-        arr[i + 1] = arr[end];
-        arr[end] = temp;
-
-        return i + 1;
+        return j - 1;
     }
 
     static void sort(int[] arr, int start, int end) {
