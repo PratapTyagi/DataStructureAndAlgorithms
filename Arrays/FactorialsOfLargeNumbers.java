@@ -13,13 +13,9 @@ public class FactorialsOfLargeNumbers {
         // BigInteger to string
         String value = F.toString();
 
-        // string to char[]
-        char[] charArray = value.toCharArray();
-
-        // convert characters to int
         // now it can be added it to list
-        for (int i = 0; i < charArray.length; i++) {
-            int k = Integer.parseInt(String.valueOf(charArray[i]));
+        for (int i = 0; i < value.length(); i++) {
+            int k = Integer.parseInt(String.valueOf(value.charAt(i)));
             list.add(k);
         }
 
