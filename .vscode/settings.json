@@ -2,14 +2,15 @@
   "java.project.sourcePaths": [
     "Trees",
     "SortingAndSearching",
+    "LinkedLists",
     "DynamicProgramming/UnboundedKnapsack",
     "DynamicProgramming/Trees",
     "DynamicProgramming/Randoms",
     "DynamicProgramming/Mcm",
     "DynamicProgramming/Lcs",
+    "DynamicProgramming/Lis",
     "DynamicProgramming/Knapsack01",
     "BinarySearchTree",
     "Arrays",
-    "LinkedLists"
   ]
 }
