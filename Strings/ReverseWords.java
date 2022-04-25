@@ -1,5 +1,3 @@
-package Strings;
-
 public class ReverseWords {
     public static void main(String[] args) {
         String s = "i.like.this.program.very.much";

@@ -1,5 +1,3 @@
-package Strings;
-
 public class DivisibilityOf7 {
     static int isdivisible7(String num) {
         java.math.BigInteger bi = new java.math.BigInteger(num);

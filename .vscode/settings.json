@@ -7,10 +7,11 @@
     "DynamicProgramming/Trees",
     "DynamicProgramming/Randoms",
     "DynamicProgramming/Mcm",
-    "DynamicProgramming/Lcs",
     "DynamicProgramming/Lis",
+    "DynamicProgramming/Lcs",
     "DynamicProgramming/Knapsack01",
     "BinarySearchTree",
     "Arrays",
+    "Strings"
   ]
 }

@@ -1,5 +1,3 @@
-package Strings;
-
 public class LongestCommonPrefix {
     static String longestCommonPrefix(String arr[], int n) {
         String s = "";

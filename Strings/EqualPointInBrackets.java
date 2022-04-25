@@ -1,5 +1,3 @@
-package Strings;
-
 public class EqualPointInBrackets {
     static int find(String s) {
         int n = s.length();

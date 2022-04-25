@@ -1,5 +1,3 @@
-package Strings;
-
 public class CheckIfStringRotated {
     static boolean isRotated(String a, String b) {
         if (a.equals(b)) {

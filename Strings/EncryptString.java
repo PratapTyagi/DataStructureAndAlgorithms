@@ -1,5 +1,3 @@
-package Strings;
-
 public class EncryptString {
     static String encryptString(String s) {
         String res = "";
