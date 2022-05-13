@@ -1,6 +1,7 @@
 {
   "java.project.sourcePaths": [
     "Trees",
+    "Strings",
     "SortingAndSearching",
     "LinkedLists",
     "DynamicProgramming/UnboundedKnapsack",
@@ -12,6 +13,6 @@
     "DynamicProgramming/Knapsack01",
     "BinarySearchTree",
     "Arrays",
-    "Strings"
+    "Recursion"
   ]
 }
