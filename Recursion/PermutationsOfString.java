@@ -29,7 +29,6 @@ public class PermutationsOfString {
 
     static List<String> find_permutation(String s) {
         List<String> ans = new ArrayList<>();
-        int n = s.length();
         solve(ans, s, 0);
 
         Collections.sort(ans);
