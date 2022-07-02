@@ -3,6 +3,7 @@
     "Trees",
     "Strings",
     "SortingAndSearching",
+    "Recursion",
     "LinkedLists",
     "DynamicProgramming/UnboundedKnapsack",
     "DynamicProgramming/Trees",
@@ -13,6 +14,6 @@
     "DynamicProgramming/Knapsack01",
     "BinarySearchTree",
     "Arrays",
-    "Recursion"
+    "Graphs"
   ]
 }
