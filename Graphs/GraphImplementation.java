@@ -35,7 +35,7 @@ public class GraphImplementation {
             int v2 = Integer.parseInt(input[1]);
             int wt = Integer.parseInt(input[2]);
             graph[v1].add(new Edge(v1, v2, wt));
-            graph[v2].add(new Edge(v1, v2, wt));
+            graph[v2].add(new Edge(v2, v1, wt));
         }
         return graph;
     }
