@@ -5,6 +5,7 @@
     "SortingAndSearching",
     "Recursion",
     "LinkedLists",
+    "GraphsDfs",
     "DynamicProgramming/UnboundedKnapsack",
     "DynamicProgramming/Trees",
     "DynamicProgramming/Randoms",
@@ -14,6 +15,6 @@
     "DynamicProgramming/Knapsack01",
     "BinarySearchTree",
     "Arrays",
-    "Graphs"
+    "GraphsBfs"
   ]
 }
