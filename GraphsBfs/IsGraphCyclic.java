@@ -4,31 +4,20 @@ import java.util.ArrayDeque;
 import java.util.ArrayList;
 
 public class IsGraphCyclic {
-    static class Pair {
-        int val;
-        int par;
-
-        Pair(int s, int p) {
-            val = s;
-            par = p;
-        }
-    }
-
     static boolean isCyclic(ArrayList<Edge>[] graph, boolean[] isVisited, int src) {
-        ArrayDeque<Pair> queue = new ArrayDeque<>();
-        queue.add(new Pair(src, -1));
-        while (!queue.isEmpty()) {
-            Pair rem = queue.removeFirst();
-            int val = rem.val;
-            int par = rem.par;
+        ArrayDeque<Integer> queue = new ArrayDeque<>();
+        queue.add(src);
 
-            for (Edge e : graph[val]) {
-                if (!isVisited[e.dest]) {
-                    queue.add(new Pair(e.dest, par));
-                    isVisited[e.dest] = true;
-                } else if (par != e.dest)
-                    return true;
-            }
+        while (!queue.isEmpty()) {
+            Integer val = queue.removeFirst();
+
+            if (isVisited[val])
+                return true;
+            isVisited[val] = true;
+
+            for (Edge e : graph[val])
+                if (!isVisited[e.dest])
+                    queue.add(e.dest);
         }
 
         return false;
@@ -38,7 +27,15 @@ public class IsGraphCyclic {
         GraphImplementation graphClass = new GraphImplementation();
         ArrayList<Edge>[] graph = graphClass.createGraph();
 
-        boolean[] isVisited = new boolean[graph.length];
-        System.out.println(isCyclic(graph, isVisited, 0));
+        int v = graph.length;
+        boolean[] isVisited = new boolean[v];
+        for (int i = 0; i < v; i++) {
+            if (!isVisited[i])
+                if (isCyclic(graph, isVisited, i)) {
+                    System.out.println(true);
+                    return;
+                }
+        }
+        System.out.println(false);
     }
 }
