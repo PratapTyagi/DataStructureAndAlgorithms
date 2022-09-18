@@ -5,7 +5,7 @@ public class BinaryNumberListToDecimal {
         }
         int ans = 0;
         while (head != null) {
-            ans = ans >> 1 | head.data;
+            ans = ans << 1 | head.data;
             head = head.next;
         }
 

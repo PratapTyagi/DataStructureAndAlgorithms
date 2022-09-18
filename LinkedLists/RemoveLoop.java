@@ -1,30 +1,51 @@
 public class RemoveLoop {
-    public static void removeLoop(LinkedListNode head) {
-        LinkedListNode slow = head;
-        LinkedListNode fast = head;
 
-        while (slow != null && fast != null && fast.next != null) {
+    private static boolean detectCycle(LinkedListNode head) {
+        if (head == null || head.next == null)
+            return false;
+
+        LinkedListNode slow = head, fast = head;
+
+        while (fast != null && fast.next != null) {
             slow = slow.next;
             fast = fast.next.next;
-            if (slow == fast)
-                break;
-        }
 
-        if (slow == head) {
-            while (fast.next != slow) {
-                fast = fast.next;
+            if (slow == fast) {
+                return true;
             }
-            fast.next = null;
         }
 
-        else if (slow == fast) {
-            slow = head;
-            while (slow.next != fast.next) {
+        return false;
+    }
+
+    private static void removeLoop(LinkedListNode head, LinkedListImplementation i) {
+        if (!detectCycle(head))
+            return;
+
+        // First point when slow fast meet
+        LinkedListNode slow = head, fast = head;
+        do {
+            slow = slow.next;
+            fast = fast.next.next;
+        } while (slow != fast);
+
+        // if the cycle is present on head itself
+        if (fast == head) {
+            while (slow.next != head)
                 slow = slow.next;
-                fast = fast.next;
-            }
-            fast.next = null;
+            slow.next = null;
+            return;
         }
+
+        fast = head; // fast to 1st node in linked list
+
+        // check for the cycle point
+        while (slow.next != fast.next) {
+            slow = slow.next;
+            fast = fast.next;
+        }
+
+        slow.next = null;
     }
 
     public static void main(String[] args) {
@@ -37,7 +58,7 @@ public class RemoveLoop {
         LinkedListNode head = i.head;
 
         head.next.next.next = head;
-        removeLoop(head);
+        removeLoop(head, i);
 
         i.printList(head);
     }

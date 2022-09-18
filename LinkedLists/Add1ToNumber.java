@@ -23,7 +23,7 @@ public class Add1ToNumber {
             int data = temp.data + carry;
             temp.data = data % 10;
             carry = data / 10;
-            prev = temp.next == null ? temp : null;
+            prev = temp;
             temp = temp.next;
         }
 
