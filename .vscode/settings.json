@@ -1,11 +1,13 @@
 {
   "java.project.sourcePaths": [
+    "temp",
     "Trees",
     "Strings",
     "SortingAndSearching",
     "Recursion",
     "LinkedLists",
     "GraphsDfs",
+    "GraphsBfs",
     "DynamicProgramming/UnboundedKnapsack",
     "DynamicProgramming/Trees",
     "DynamicProgramming/Randoms",
@@ -15,6 +17,6 @@
     "DynamicProgramming/Knapsack01",
     "BinarySearchTree",
     "Arrays",
-    "GraphsBfs"
+    "BinaySearch"
   ]
 }
