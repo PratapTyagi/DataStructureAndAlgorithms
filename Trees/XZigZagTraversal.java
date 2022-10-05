@@ -10,7 +10,7 @@ import java.util.*;
   10   9 
 */
 
-public class ZigZagTraversal {
+public class XZigZagTraversal {
     static void zigZag(Node root) {
         ArrayList<Integer> al = new ArrayList<>();
         ArrayDeque<Node> queue = new ArrayDeque<>();
@@ -53,8 +53,6 @@ public class ZigZagTraversal {
         Implementation i = new Implementation();
         i.createBinaryTree(arr, root);
 
-        i.inOrder(root);
-        System.out.println();
         zigZag(root);
     }
 }

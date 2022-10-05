@@ -1,4 +1,4 @@
-public class BalancedTree {
+public class IVBalancedTree {
 
     static int height(Node root) {
         if (root == null) {
@@ -12,15 +12,14 @@ public class BalancedTree {
         if (root == null) {
             return true;
         }
+        int otp = Math.abs(height(root.left) - height(root.right));
+        if (otp > 1)
+            return false;
 
         boolean left = isBalanced(root.left);
         boolean right = isBalanced(root.right);
-        int otp = Math.abs(height(root.left) - height(root.right));
 
-        if (otp > 1 || left == false || right == false) {
-            return false;
-        }
-        return true;
+        return left || right;
     }
 
     public static void main(String[] args) {

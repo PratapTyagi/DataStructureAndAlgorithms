@@ -1,4 +1,4 @@
-public class TwoTreesIdentical {
+public class XIIITwoTreesIdentical {
 
     static boolean identical(Node root1, Node root2) {
         if (root1 == null && root2 == null) {
@@ -15,11 +15,7 @@ public class TwoTreesIdentical {
 
         boolean left = identical(root1.left, root2.left);
         boolean right = identical(root1.right, root2.right);
-        if (left == false || right == false) {
-            return false;
-        }
-
-        return true;
+        return left && right;
     }
 
     public static void main(String[] args) {

@@ -1,17 +1,20 @@
-public class IsSymmetric {
+public class XVIsSymmetric {
 
     static boolean isSymmetric(Node root1, Node root2) {
         if (root1 == null && root2 == null) {
             return true;
         }
-        if (root1 != null && root2 != null && root1.data == root2.data) {
-            return isSymmetric(root1.left, root2.right) && isSymmetric(root1.right, root2.left);
+        if (root1 == null || root2 == null) {
+            return false;
         }
-        return false;
+        if (root1.data != root2.data) {
+            return false;
+        }
+        return isSymmetric(root1.left, root2.right) && isSymmetric(root1.right, root2.left);
     }
 
     public static void main(String[] a) {
-        Integer[] arr = { 1, 2, null, null, 2, null, null };
+        Integer[] arr = { 1, 2, null, 3, 2, null, 3 };
         Node root = new Node(arr[0]);
 
         Implementation i = new Implementation();

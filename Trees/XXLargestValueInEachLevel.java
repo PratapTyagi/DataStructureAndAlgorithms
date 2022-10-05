@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class LargestValueInEachLevel {
+public class XXLargestValueInEachLevel {
     static void largestValue(Node root, int level, HashMap<Integer, Integer> map) {
         if (root == null) {
             return;

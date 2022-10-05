@@ -1,6 +1,6 @@
 import java.util.HashMap;
 
-public class ConstructTreeFromInorderPreorder {
+public class IConstructTreeFromInorderPreorder {
     static Node construct(int preorder[], int preStart, int preEnd, int inorder[], int inStart, int inEnd,
             HashMap<Integer, Integer> map) {
         if (preStart > preEnd || inStart > inEnd)

@@ -1,4 +1,4 @@
-public class HeightOfBinaryTree {
+public class IIIHeightOfBinaryTree {
     static int height(Node root) {
         if (root == null) {
             return 0;

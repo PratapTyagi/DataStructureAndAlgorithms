@@ -1,4 +1,4 @@
-public class LCABinaryTree {
+public class XXIIILCABinaryTree {
     static Node lca(Node root, int n1, int n2) {
         if (root == null)
             return null;

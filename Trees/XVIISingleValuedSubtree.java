@@ -1,4 +1,4 @@
-public class SingleValuedSubtree {
+public class XVIISingleValuedSubtree {
     static boolean uniValue(Node root, int[] arr) {
         if (root == null)
             return true;

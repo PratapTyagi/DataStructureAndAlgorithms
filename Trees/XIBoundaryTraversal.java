@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.Stack;
 
-public class BoundaryTraversal {
+public class XIBoundaryTraversal {
     static boolean isLeaf(Node curr) {
         if (curr.left == null && curr.right == null)
             return true;

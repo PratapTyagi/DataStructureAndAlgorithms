@@ -1,4 +1,4 @@
-public class ConstructTreeFromPreorderTraversal {
+public class IIConstructTreeFromPreorderTraversal {
     static Node create(int n, int[] pre, char[] preLN, int[] preStartIndex) {
         if (preStartIndex[0] >= n)
             return null;
@@ -25,7 +25,7 @@ public class ConstructTreeFromPreorderTraversal {
     public static void main(String[] args) {
         int N = 5;
         int pre[] = { 10, 30, 20, 5, 15 };
-        char preLN[] = { 'N', 'N', 'L', 'L', 'L' };
+        char preLN[] = { 'N', 'N', 'L', 'L', 'L' }; // Leaf and non leaf nodes
 
         Implementation i = new Implementation();
         Node root = constructTree(N, pre, preLN);

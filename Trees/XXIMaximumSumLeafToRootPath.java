@@ -1,4 +1,4 @@
-public class MaximumSumLeafToRootPath {
+public class XXIMaximumSumLeafToRootPath {
     static int max(Node root) {
         if (root == null)
             return 0;

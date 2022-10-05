@@ -1,4 +1,4 @@
-public class MinimumDistanceBetweenTwoNodes {
+public class XXIVMinimumDistanceBetweenTwoNodes {
     static Node lca(Node root, int a, int b) {
         if (root == null)
             return null;

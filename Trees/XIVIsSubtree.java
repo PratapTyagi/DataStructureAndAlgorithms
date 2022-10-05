@@ -1,4 +1,4 @@
-public class IsSubtree {
+public class XIVIsSubtree {
 
     static boolean areIdentical(Node root1, Node root2) {
         if (root1 == null && root2 == null) {

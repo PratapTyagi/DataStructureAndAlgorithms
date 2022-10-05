@@ -2,7 +2,7 @@ import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.Queue;
 
-public class LevelOrderTraversal {
+public class VIILevelOrderTraversal {
     static ArrayList<Integer> levelOrder(Node node) {
         ArrayList<Integer> al = new ArrayList<Integer>();
         Queue<Node> queue = new ArrayDeque<>();
@@ -10,15 +10,13 @@ public class LevelOrderTraversal {
         queue.add(node);
         while (!queue.isEmpty()) {
             // rpa -> remove, process, add
-            for (int i = 0; i < queue.size(); i++) {
-                Node peek = queue.poll();
+            Node peek = queue.poll();
 
-                al.add(peek.data);
-                if (peek.left != null)
-                    queue.add(peek.left);
-                if (peek.right != null)
-                    queue.add(peek.right);
-            }
+            al.add(peek.data);
+            if (peek.left != null)
+                queue.add(peek.left);
+            if (peek.right != null)
+                queue.add(peek.right);
         }
 
         return al;

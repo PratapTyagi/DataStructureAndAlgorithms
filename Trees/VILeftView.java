@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class LeftView {
+public class VILeftView {
     static void solve(Node root, int count, HashMap<Integer, Integer> map, ArrayList<Integer> ans) {
         if (root == null)
             return;
@@ -24,7 +24,7 @@ public class LeftView {
 
     public static void main(String[] args) {
         Implementation i = new Implementation();
-        Integer[] arr = { 1, 2, 4, null, null, 5, null, null, 3, 6, null, null, 7, null, 5 };
+        Integer[] arr = { 1, 2, 4, null, null, 5, null, null, 3, 6, null, null, 7, null, 10 };
 
         Node root = new Node(arr[0]);
         i.createBinaryTree(arr, root);

@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class Ancestors {
+public class XVIAncestors {
     static boolean find(Node root, int target, ArrayList<Integer> al) {
         if (root == null)
             return false;

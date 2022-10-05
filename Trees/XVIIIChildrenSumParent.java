@@ -1,4 +1,4 @@
-public class ChildrenSumParent {
+public class XVIIIChildrenSumParent {
 
     static int isSumProperty(Node root) {
         if (root == null) {

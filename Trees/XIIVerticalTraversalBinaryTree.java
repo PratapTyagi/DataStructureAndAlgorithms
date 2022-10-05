@@ -5,7 +5,7 @@ import java.util.Queue;
 import java.util.TreeMap;
 import java.util.Map.Entry;
 
-public class VerticalTraversalBinaryTree {
+public class XIIVerticalTraversalBinaryTree {
     static class Pair {
         Node node;
         int breadth;
@@ -24,29 +24,21 @@ public class VerticalTraversalBinaryTree {
         queue.offer(new Pair(root, 0));
 
         while (!queue.isEmpty()) {
-            for (int i = 0; i < queue.size(); i++) {
-                Pair peek = queue.poll();
+            Pair peek = queue.poll();
 
-                if (map.containsKey(peek.breadth))
-                    map.get(peek.breadth).add(peek.node.data);
-                else
-                    map.put(peek.breadth, new ArrayList<>(Arrays.asList(peek.node.data)));
+            if (map.containsKey(peek.breadth))
+                map.get(peek.breadth).add(peek.node.data);
+            else
+                map.put(peek.breadth, new ArrayList<>(Arrays.asList(peek.node.data)));
 
-                if (peek.node.left != null)
-                    queue.add(new Pair(peek.node.left, peek.breadth--));
-                if (peek.node.right != null)
-                    queue.add(new Pair(peek.node.right, peek.breadth++));
-            }
+            if (peek.node.left != null)
+                queue.add(new Pair(peek.node.left, peek.breadth - 1));
+            if (peek.node.right != null)
+                queue.add(new Pair(peek.node.right, peek.breadth + 1));
         }
 
-        for (Entry<Integer, ArrayList<Integer>> pair : map.entrySet()) {
-            ArrayList<Integer> array = pair.getValue();
-            for (int i = 0; i < array.size(); i++) {
-                System.out.print(array.get(i) + " ");
-                al.add(array.get(i));
-            }
-            System.out.println();
-        }
+        for (Entry<Integer, ArrayList<Integer>> pair : map.entrySet())
+            al.addAll(pair.getValue());
 
         return al;
     }

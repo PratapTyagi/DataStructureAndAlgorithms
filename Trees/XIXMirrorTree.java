@@ -1,4 +1,4 @@
-public class MirrorTree {
+public class XIXMirrorTree {
     static void mirror(Node root) {
         if (root == null) {
             return;
