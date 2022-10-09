@@ -18,9 +18,8 @@ public class FindAllPaths {
     }
 
     public static void main(String[] args) throws NumberFormatException, IOException {
-        GraphImplementation graphClass = new GraphImplementation();
-        ArrayList<Edge>[] graph = graphClass.createGraph();
-        graphClass.printGraph(graph);
+        ArrayList<Edge>[] graph = GraphImplementation.createGraph();
+        GraphImplementation.printGraph(graph);
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         boolean[] isVisited = new boolean[graph.length];

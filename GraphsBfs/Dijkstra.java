@@ -1,9 +1,10 @@
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-import java.lang.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.PriorityQueue;;
+
+@SuppressWarnings("unchecked")
 
 /**
  * Dijkstra

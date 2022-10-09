@@ -40,8 +40,7 @@ public class IsBipartite {
     }
 
     public static void main(String[] args) throws Exception {
-        GraphImplementation graphClass = new GraphImplementation();
-        ArrayList<Edge>[] graph = graphClass.createGraph();
+        ArrayList<Edge>[] graph = GraphImplementation.createGraph();
 
         int[] isVisited = new int[graph.length];
         Arrays.fill(isVisited, -1);

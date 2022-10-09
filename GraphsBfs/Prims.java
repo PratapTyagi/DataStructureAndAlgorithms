@@ -46,8 +46,7 @@ public class Prims {
     }
 
     public static void main(String[] args) throws Exception {
-        GraphImplementation graphClass = new GraphImplementation();
-        ArrayList<Edge>[] graph = graphClass.createGraph();
+        ArrayList<Edge>[] graph = GraphImplementation.createGraph();
 
         int v = graph.length;
         boolean[] isVisited = new boolean[v];

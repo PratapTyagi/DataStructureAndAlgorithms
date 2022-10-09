@@ -66,8 +66,7 @@ public class Dfs {
     }
 
     public static void main(String[] args) throws NumberFormatException, IOException {
-        GraphImplementation graphClass = new GraphImplementation();
-        ArrayList<Edge>[] graph = graphClass.createGraph();
+        ArrayList<Edge>[] graph = GraphImplementation.createGraph();
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         boolean[] isVisited = new boolean[graph.length];

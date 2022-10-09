@@ -1,5 +1,3 @@
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
 import java.util.ArrayDeque;
 import java.util.ArrayList;
 
@@ -34,10 +32,8 @@ public class Bfs {
     }
 
     public static void main(String[] args) throws Exception {
-        GraphImplementation graphClass = new GraphImplementation();
-        ArrayList<Edge>[] graph = graphClass.createGraph();
+        ArrayList<Edge>[] graph = GraphImplementation.createGraph();
 
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         boolean[] isVisited = new boolean[graph.length];
         bfs(graph, isVisited, 2);
     }

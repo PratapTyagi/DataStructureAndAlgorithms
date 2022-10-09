@@ -9,6 +9,7 @@ public class TopologicalSort {
         int v = Integer.parseInt(br.readLine());
         int e = Integer.parseInt(br.readLine());
 
+        @SuppressWarnings("unchecked")
         ArrayList<Edge>[] graph = new ArrayList[v];
         for (int i = 0; i < graph.length; i++)
             graph[i] = new ArrayList<Edge>();

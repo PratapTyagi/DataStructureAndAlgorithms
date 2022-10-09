@@ -30,6 +30,7 @@ public class GetConnectedComponents {
     public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int vertices = Integer.parseInt(br.readLine());
+        @SuppressWarnings("unchecked")
         ArrayList<Edge>[] graph = new ArrayList[vertices];
         for (int i = 0; i < vertices; i++) {
             graph[i] = new ArrayList<>();

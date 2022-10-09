@@ -31,7 +31,7 @@ public class PerfectFriend {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int vertices = Integer.parseInt(br.readLine());
         int edges = Integer.parseInt(br.readLine());
-
+        @SuppressWarnings("unchecked")
         ArrayList<Edge>[] graph = new ArrayList[vertices];
 
         for (int i = 0; i < graph.length; i++)

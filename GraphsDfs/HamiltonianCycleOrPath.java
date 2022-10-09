@@ -47,8 +47,7 @@ public class HamiltonianCycleOrPath {
     }
 
     public static void main(String[] args) throws Exception {
-        GraphImplementation graphClass = new GraphImplementation();
-        ArrayList<Edge>[] graph = graphClass.createGraph();
+        ArrayList<Edge>[] graph = GraphImplementation.createGraph();
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         HashSet<Integer> isVisited = new HashSet<Integer>();
