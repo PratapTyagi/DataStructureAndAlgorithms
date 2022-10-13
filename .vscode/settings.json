@@ -15,8 +15,9 @@
     "DynamicProgramming/Lis",
     "DynamicProgramming/Lcs",
     "DynamicProgramming/Knapsack01",
+    "BinaySearch",
     "BinarySearchTree",
     "Arrays",
-    "BinaySearch"
+    "Tries"
   ]
 }
