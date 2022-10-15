@@ -15,7 +15,6 @@ public class LargestWordInDictionary {
             if (n2 > n1)
                 continue;
             while (j < n2 && k < n1) {
-                char c = s.charAt(j);
                 if (ele.charAt(j) == s.charAt(k))
                     j++;
                 k++;

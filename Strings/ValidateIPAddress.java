@@ -3,7 +3,6 @@ import java.util.HashSet;
 public class ValidateIPAddress {
     static boolean isValid(String s) {
         int n = s.length();
-        StringBuilder sb = new StringBuilder();
         int count = 0;
 
         for (int i = 1; i < n; i++) {
@@ -19,8 +18,8 @@ public class ValidateIPAddress {
             return false;
 
         HashSet<String> hs = new HashSet<>();
-        count = 0;
         StringBuilder temp = new StringBuilder();
+        count = 0;
 
         for (int i = 0; i < 256; i++)
             hs.add(Integer.toString(i));

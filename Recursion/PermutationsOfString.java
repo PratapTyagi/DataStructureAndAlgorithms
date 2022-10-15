@@ -37,7 +37,7 @@ public class PermutationsOfString {
     }
 
     public static void main(String[] args) {
-        String s = "ABCD";
+        String s = "ABC";
         List<String> ans = find_permutation(s);
         for (String ele : ans)
             System.out.print(ele + " ");
