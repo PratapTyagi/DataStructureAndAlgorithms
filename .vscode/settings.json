@@ -1,6 +1,7 @@
 {
   "java.project.sourcePaths": [
     "temp",
+    "Tries",
     "Trees",
     "Strings",
     "SortingAndSearching",
@@ -18,6 +19,6 @@
     "BinaySearch",
     "BinarySearchTree",
     "Arrays",
-    "Tries"
+    "Algorithms"
   ]
 }
