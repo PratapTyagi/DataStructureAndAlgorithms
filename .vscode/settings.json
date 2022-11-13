@@ -7,6 +7,7 @@
     "SortingAndSearching",
     "Recursion",
     "LinkedLists",
+    "Heaps",
     "GraphsDfs",
     "GraphsBfs",
     "DynamicProgramming/UnboundedKnapsack",
@@ -20,6 +21,6 @@
     "BinarySearchTree",
     "Arrays",
     "Algorithms",
-    "Heaps"
+    "BitManipulation"
   ]
 }
