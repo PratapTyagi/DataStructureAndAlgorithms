@@ -15,6 +15,11 @@ public class BitDifference {
                     countSetBits++;
             }
 
+            // Pairs of diff bits would come out to be diff bits multiplication and since
+            // these can be written in reverse i.e why 2
+            // Example :
+            // a -> 1101 b -> 1110
+            // 0th position bits are diff thereby 1 * 1 * 2 (ba)
             long pairs = (countSetBits * countUnsetBits * 2) % mod;
             res += pairs;
         }
